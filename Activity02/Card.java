@@ -1,4 +1,4 @@
-package Activity02;
+package Elevens.Activity02;
 
 /**
  * Card.java
@@ -92,3 +92,4 @@ public class Card {
 		return rank + " of " + suit + " (point value = " + pointValue + ")";
 	}
 }
+
