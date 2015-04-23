@@ -14,6 +14,7 @@ public class Deck {
 	 * cards contains all the cards in the deck.
 	 */
 	private List<Card> cards;
+	private List<Card> shuffled;
 
 	/**
 	 * size is the number of not-yet-dealt cards.
@@ -39,7 +40,7 @@ public class Deck {
 			}
 		}
 		size = cards.size();
-		shuffle();
+		shuffle(cards);
 	}
 
 
@@ -63,8 +64,13 @@ public class Deck {
 	 * Randomly permute the given collection of cards
 	 * and reset the size to represent the entire deck.
 	 */
-	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+	public void shuffle(List<Card> cards) {
+		int j = 0;
+        shuffled = new ArrayList<Card>();
+        for(int kd = 51; kd > 1; kd--){
+            j = (int)Math.random()*kd;
+            shuffled.add(j,cards.get(kd));
+        }
 	}
 
 	/**
